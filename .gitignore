@@ -73,3 +73,10 @@ Thumbs.db
 
 #Cmake generated files
 CMakeLists.txt.user
+
+#Cmake build files
+cmake-build-debug
+
+#Clion
+.idea/
+
