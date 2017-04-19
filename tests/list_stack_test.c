@@ -45,4 +45,5 @@ int main()
 
 
     DisposeStack(s);
+    return 0;
 }
