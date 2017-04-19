@@ -1,5 +1,5 @@
-#ifndef ARRAY_ArrayStack_H
-#define ARRAY_ArrayStack_H
+#ifndef ARRAY_STACK_H
+#define ARRAY_STACK_H
 
 typedef int ElementType;
 
@@ -7,7 +7,7 @@ struct ArrayStackNode;
 typedef struct ArrayStackNode *ArrayStack;
 
 struct ArrayStackNode{
-    int Capacity; //栈的空间总数
+    unsigned int Capacity; //栈的空间总数
     int TopOfStack; //当前的栈顶位置
     ElementType *Array;
 };
@@ -23,4 +23,4 @@ void Pop( ArrayStack S );
 ElementType TopAndPop( ArrayStack S );
 void PrintArrayStack(ArrayStack S);
 
-#endif //ARRAY_ArrayStack_H
+#endif //ARRAY_STACK_H
