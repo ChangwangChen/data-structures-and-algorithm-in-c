@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "includes/list.h"
+#include "list.h"
 
 int main(int argc, char *argv[])
 {

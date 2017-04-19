@@ -1,6 +1,6 @@
 #include <stdlib.h>
-#include "../includes/list.h"
-#include "../includes/fatal.h"
+#include "kernel/fatal.h"
+#include "list.h"
 
 List MakeEmpty(List L)
 {
