@@ -1,3 +1,3 @@
 set(DS_LIST_SRC
         list.c)
-add_library(${CMAKE_PROJECT_NAME} SHARED ${DS_LIST_SRC})
+add_library(DS_LIB_LIST SHARED ${DS_LIST_SRC})
