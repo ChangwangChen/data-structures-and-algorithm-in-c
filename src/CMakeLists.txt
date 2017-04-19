@@ -1,4 +1,3 @@
-set(DS_LIST_SRC
-    list.c)
-
-add_library(${CMAKE_PROJECT_NAME} SHARED ${DS_LIST_SRC})
+#加载 List
+set(DS_LIST_SOURCE_DIR ${DS_SOURCE_DIR}/list)
+add_subdirectory(${DS_LIST_SOURCE_DIR})
