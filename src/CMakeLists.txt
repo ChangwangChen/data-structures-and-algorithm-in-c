@@ -5,3 +5,8 @@ add_subdirectory(${DS_LIST_SOURCE_DIR})
 #加载 Stack
 set(DS_STACK_SOURCE_DIR ${DS_SOURCE_DIR}/stack)
 add_subdirectory(${DS_STACK_SOURCE_DIR})
+
+
+#加载 Queue
+set(DS_QUEUE_SOURCE_DIR ${DS_SOURCE_DIR}/queue)
+add_subdirectory(${DS_QUEUE_SOURCE_DIR})
