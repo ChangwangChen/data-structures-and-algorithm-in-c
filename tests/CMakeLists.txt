@@ -13,3 +13,7 @@ target_link_libraries(Array_Stack_Test DS_LIB_ARRAY_STACK)
 #Queue测试
 add_executable(Array_Queue_Test array_queue_test.c)
 target_link_libraries(Array_Queue_Test DS_LIB_ARRAY_QUEUE)
+
+#Queue测试
+add_executable(List_Queue_Test list_queue_test.c)
+target_link_libraries(List_Queue_Test DS_LIB_LIST_QUEUE)
