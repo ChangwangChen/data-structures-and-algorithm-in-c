@@ -1,5 +1,5 @@
 //
-// 链表实现的大数相加
+// 栈实现的大数相加
 //
 #include <stdio.h>
 #include <stdlib.h>
@@ -81,9 +81,9 @@ int main()
 
     PrintStack(ret);
 
-    free(a);
-    free(b);
-    free(ret);
+    DisposeStack(a);
+    DisposeStack(b);
+    DisposeStack(ret);
 
     return 0;
 }
