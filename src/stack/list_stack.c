@@ -12,23 +12,23 @@ Stack CreateStack()
         //这里不知道有没有必要
         S->Element = NULL;
         S->Next = NULL;
-        MakeEmpty(S);
+        MakeEmptyStack(S);
         return S;
     }
 }
 
-void MakeEmpty(Stack S)
+void MakeEmptyStack(Stack S)
 {
     if(S == NULL) {
         FatalError("必须先创建一个Stack！");
     }else {
-        while(!IsEmpty(S)) {
+        while(!IsEmptyStack(S)) {
             Pop(S);
         }
     }
 }
 
-int IsEmpty(Stack S)
+int IsEmptyStack(Stack S)
 {
     return S->Next == NULL;
 }
@@ -57,7 +57,7 @@ void Pop(Stack S)
     if(S == NULL) {
         FatalError("必须先创建一个Stack！");
     }else {
-        if(IsEmpty(S)) {
+        if(IsEmptyStack(S)) {
             FatalError("空Stack");
         }else {
             PtrToNode Tmp;
@@ -71,22 +71,40 @@ void Pop(Stack S)
 
 void DisposeStack(Stack S)
 {
-    MakeEmpty(S);
+    MakeEmptyStack(S);
     free(S);
 }
 
 ElementType Top(Stack S)
 {
-    if(IsEmpty(S)) {
+    if(IsEmptyStack(S)) {
         FatalError("空stack");
     }else {
         return S->Next->Element;
     }
 }
 
+ElementType TopAndPop(Stack S)
+{
+    ElementType X;
+    X = 0;
+    if(IsEmptyStack(S)) {
+        FatalError("空stack");
+    }else {
+        PtrToNode tmp;
+        tmp = S->Next;
+        X = tmp->Element;
+        S->Next = tmp->Next;
+
+        free(tmp);
+    }
+
+    return X;
+}
+
 void PrintStack(Stack S)
 {
-    if(IsEmpty(S)) {
+    if(IsEmptyStack(S)) {
         printf("空Stack");
     }else {
         PtrToNode Tmp;

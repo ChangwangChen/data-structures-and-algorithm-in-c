@@ -18,10 +18,10 @@ struct QueueHeader {
     QueueItem Rear;
 };
 
-int IsEmpty(Queue Q);
+int IsEmptyQueue(Queue Q);
 Queue CreateQueue();
 void DisposeQueue(Queue Q);
-void MakeEmpty(Queue Q);
+void MakeEmptyQueue(Queue Q);
 void Enqueue(ElementType X, Queue Q);
 void Dequeue(Queue);
 ElementType Front(Queue Q);

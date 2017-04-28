@@ -2,7 +2,7 @@
 #include "kernel/fatal.h"
 #include "list_queue.h"
 
-int IsEmpty(Queue Q)
+int IsEmptyQueue(Queue Q)
 {
     return Q->Front == NULL;
 }
@@ -18,17 +18,17 @@ Queue CreateQueue()
         Q->Front = NULL;
         Q->Rear = NULL;
 
-        MakeEmpty(Q);
+        MakeEmptyQueue(Q);
         return Q;
     }
 }
 
-void MakeEmpty(Queue Q)
+void MakeEmptyQueue(Queue Q)
 {
     if(Q == NULL) {
         Error("必须创建一个Queue.");
     }else {
-        while(!IsEmpty(Q)) {
+        while(!IsEmptyQueue(Q)) {
             Dequeue(Q);
         }
 
@@ -59,7 +59,7 @@ void Enqueue(ElementType X, Queue Q)
 
 void Dequeue(Queue Q)
 {
-    if(IsEmpty(Q)) {
+    if(IsEmptyQueue(Q)) {
         Error("Empty Queue.");
     }else {
         QueueItem front = Q->Front;
@@ -76,13 +76,13 @@ void Dequeue(Queue Q)
 
 void DisposeQueue(Queue Q)
 {
-    MakeEmpty(Q);
+    MakeEmptyQueue(Q);
     free(Q);
 }
 
 ElementType Front(Queue Q)
 {
-    if(IsEmpty(Q)) {
+    if(IsEmptyQueue(Q)) {
         Error("Empty queue.");
     }else {
         return Q->Front->Value;
@@ -93,7 +93,7 @@ ElementType FrontAndDequeue(Queue Q)
 {
     ElementType X = 0;
 
-    if(IsEmpty(Q)) {
+    if(IsEmptyQueue(Q)) {
         Error("Empty queue.");
     }else {
         QueueItem tmp = Q->Front;
@@ -111,7 +111,7 @@ ElementType FrontAndDequeue(Queue Q)
 
 void PrintQueue(Queue Q)
 {
-    if(IsEmpty(Q)) {
+    if(IsEmptyQueue(Q)) {
         printf("Empty Queue.");
     }else {
         printf("Print Queue:");

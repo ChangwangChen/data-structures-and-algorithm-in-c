@@ -9,7 +9,7 @@ int main()
 
     q = CreateQueue();
     PrintQueue(q);
-    if(IsEmpty(q)) {
+    if(IsEmptyQueue(q)) {
         printf("\nEmpty queue.\n");
     }
     printf("\n\n");
@@ -22,7 +22,7 @@ int main()
 
     PrintQueue(q);
     printf("Front of queue: %d\n", Front(q));
-    if(IsEmpty(q)) {
+    if(IsEmptyQueue(q)) {
         printf("\nEmpty queue.\n");
     }
     printf("\n\n");
@@ -35,7 +35,7 @@ int main()
 
     printf("\n\n");
     PrintQueue(q);
-    if(IsEmpty(q)) {
+    if(IsEmptyQueue(q)) {
         printf("\nEmpty queue.\n");
     }
     printf("Front of queue: %d\n", Front(q));
@@ -47,15 +47,15 @@ int main()
     }
     printf("\n\n");
     PrintQueue(q);
-    if(IsEmpty(q)) {
+    if(IsEmptyQueue(q)) {
         printf("\nEmpty queue.\n");
     }
     printf("Front of queue: %d\n", Front(q));
 
 
     printf("\n\nMake Empty queue!\n");
-    MakeEmpty(q);
-    if(IsEmpty(q)) {
+    MakeEmptyQueue(q);
+    if(IsEmptyQueue(q)) {
         printf("\nEmpty queue.\n");
     }
 

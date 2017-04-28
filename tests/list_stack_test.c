@@ -36,8 +36,8 @@ int main()
 
 
     printf("\n\nMake Empty Stack!\n");
-    MakeEmpty(s);
-    if(IsEmpty(s)) {
+    MakeEmptyStack(s);
+    if(IsEmptyStack(s)) {
         printf("空stack\n");
     }else {
         printf("stack 非空！\n");
